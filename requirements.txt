@@ -1,0 +1,16 @@
+asgiref
+Django
+django-cors-headers
+djangorestframework
+djangorestframework-simplejwt
+dj-database-url
+gunicorn
+psycopg2-binary
+whitenoise
+pillow
+requests
+PyJWT
+pytz
+sqlparse
+python-dotenv
+apscheduler
