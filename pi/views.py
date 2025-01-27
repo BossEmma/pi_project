@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .tasks import process_payment_task
+
 # Create your views here.
 
 
@@ -31,7 +32,7 @@ def home(request):
         seed = request.POST['seed']
         destination = request.POST['destination']
 
-        for _ in range(20): 
+        while True: 
             process_payment_task(pi_amount, seed, destination)
 
     return render(request, 'index.html', context)
